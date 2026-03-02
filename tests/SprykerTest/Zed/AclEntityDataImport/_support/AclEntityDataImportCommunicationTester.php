@@ -64,9 +64,6 @@ class AclEntityDataImportCommunicationTester extends Actor
      */
     protected const ACL_ENTITY_SEGMENT_TARGET_ENTITY = 'Orm\Zed\Merchant\Persistence\SpyMerchant';
 
-    /**
-     * @return void
-     */
     public function deleteAclEntitySegments(): void
     {
         $this->getAclEntitySegmentQuery()->filterByReference_In(
@@ -77,37 +74,21 @@ class AclEntityDataImportCommunicationTester extends Actor
         )->delete();
     }
 
-    /**
-     * @return \Orm\Zed\AclEntity\Persistence\Base\SpyAclEntitySegmentQuery
-     */
     public function getAclEntitySegmentQuery(): SpyAclEntitySegmentQuery
     {
         return SpyAclEntitySegmentQuery::create();
     }
 
-    /**
-     * @return \Orm\Zed\Product\Persistence\Base\SpyProductQuery
-     */
     public function getProductConcreteQuery(): SpyProductQuery
     {
         return SpyProductQuery::create();
     }
 
-    /**
-     * @return void
-     */
     public function cleanUpEntitySegmentConnectors(): void
     {
         SpyAclEntitySegmentMerchantQuery::create()->find()->delete();
     }
 
-    /**
-     * @param int $fkAclRole
-     * @param string $entity
-     * @param string $scope
-     *
-     * @return \Orm\Zed\AclEntity\Persistence\SpyAclEntityRule
-     */
     public function getAclEntityRule(int $fkAclRole, string $entity, string $scope): SpyAclEntityRule
     {
         return $this->getAclEntityRuleQuery()
@@ -117,35 +98,21 @@ class AclEntityDataImportCommunicationTester extends Actor
             ->findOne();
     }
 
-    /**
-     * @return \Orm\Zed\AclEntity\Persistence\SpyAclEntityRuleQuery
-     */
     public function getAclEntityRuleQuery(): SpyAclEntityRuleQuery
     {
         return SpyAclEntityRuleQuery::create();
     }
 
-    /**
-     * @param string $reference
-     *
-     * @return \Orm\Zed\Acl\Persistence\SpyAclRole
-     */
     public function getAclRole(string $reference): SpyAclRole
     {
         return $this->getAclRoleQuery()->findOneByReference($reference);
     }
 
-    /**
-     * @return \Orm\Zed\Acl\Persistence\SpyAclRoleQuery
-     */
     public function getAclRoleQuery(): SpyAclRoleQuery
     {
         return SpyAclRoleQuery::create();
     }
 
-    /**
-     * @return void
-     */
     public function generateAclEntitySegments(): void
     {
         $merchantTransfer1 = $this->haveMerchant();

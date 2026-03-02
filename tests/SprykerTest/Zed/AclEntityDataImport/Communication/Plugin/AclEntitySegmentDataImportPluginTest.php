@@ -38,9 +38,6 @@ class AclEntitySegmentDataImportPluginTest extends Unit
      */
     protected $tester;
 
-    /**
-     * @return void
-     */
     public function testImportImportsAclEntitySegment(): void
     {
         // Arrange
@@ -60,9 +57,6 @@ class AclEntitySegmentDataImportPluginTest extends Unit
         $this->assertSame(static::EXPECTED_IMPORT_COUNT, $dataImporterReportTransfer->getImportedDataSetCount());
     }
 
-    /**
-     * @return void
-     */
     public function testImportImportsAclEntitySegmentWithEmptyName(): void
     {
         // Arrange
@@ -120,9 +114,6 @@ class AclEntitySegmentDataImportPluginTest extends Unit
         ];
     }
 
-    /**
-     * @return void
-     */
     public function testGetImportTypeReturnsTypeOfImporter(): void
     {
         // Arrange
@@ -135,9 +126,6 @@ class AclEntitySegmentDataImportPluginTest extends Unit
         $this->assertEquals(AclEntityDataImportConfig::IMPORT_TYPE_ACL_ENTITY_SEGMENT, $importType);
     }
 
-    /**
-     * @return void
-     */
     protected function _after(): void
     {
         parent::_after();

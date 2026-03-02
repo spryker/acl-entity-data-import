@@ -20,11 +20,6 @@ class AclEntityDataImportDependencyProvider extends DataImportDependencyProvider
      */
     public const SERVICE_ACL_ENTITY = 'SERVICE_ACL_ENTITY';
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     public function provideBusinessLayerDependencies(Container $container): Container
     {
         $container = parent::provideBusinessLayerDependencies($container);
@@ -34,11 +29,6 @@ class AclEntityDataImportDependencyProvider extends DataImportDependencyProvider
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addAclEntityService(Container $container): Container
     {
         $container->set(static::SERVICE_ACL_ENTITY, function (Container $container) {

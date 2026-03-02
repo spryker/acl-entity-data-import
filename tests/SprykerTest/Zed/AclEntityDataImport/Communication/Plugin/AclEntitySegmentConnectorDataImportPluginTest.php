@@ -89,9 +89,6 @@ class AclEntitySegmentConnectorDataImportPluginTest extends Unit
      */
     protected $tester;
 
-    /**
-     * @return void
-     */
     public function testImportImportsAclEntitySegmentConnectorDataSuccessfully(): void
     {
         // Arrange
@@ -115,9 +112,6 @@ class AclEntitySegmentConnectorDataImportPluginTest extends Unit
         $this->assertSame(static::EXPECTED_IMPORT_ENTITY_COUNT, $dataImporterReportTransfer->getImportedDataSetCount());
     }
 
-    /**
-     * @return void
-     */
     public function testImportThrowsDataImportExceptionWhenImportDataContainsInvalidDataEntity(): void
     {
         // Assert
@@ -141,9 +135,6 @@ class AclEntitySegmentConnectorDataImportPluginTest extends Unit
         $dataImportPlugin->import($dataImporterConfigurationTransfer);
     }
 
-    /**
-     * @return void
-     */
     public function testImportThrowsDataImportExceptionWhenImportDataContainsInvalidEntityReference(): void
     {
         // Assert
@@ -170,9 +161,6 @@ class AclEntitySegmentConnectorDataImportPluginTest extends Unit
         $dataImportPlugin->import($dataImporterConfigurationTransfer);
     }
 
-    /**
-     * @return void
-     */
     public function testImportThrowsDataImportExceptionWhenImportDataContainsInvalidSegmentReference(): void
     {
         // Assert
@@ -254,9 +242,6 @@ class AclEntitySegmentConnectorDataImportPluginTest extends Unit
         ];
     }
 
-    /**
-     * @return void
-     */
     public function testGetImportTypeReturnsTypeOfImporter(): void
     {
         // Arrange
@@ -269,9 +254,6 @@ class AclEntitySegmentConnectorDataImportPluginTest extends Unit
         $this->assertEquals(AclEntityDataImportConfig::IMPORT_TYPE_ACL_ENTITY_SEGMENT_CONNECTOR, $importType);
     }
 
-    /**
-     * @return void
-     */
     protected function _after(): void
     {
         parent::_after();

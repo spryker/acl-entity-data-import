@@ -20,19 +20,11 @@ class AclEntitySegmentConnectorWriterStep implements DataImportStepInterface
     */
     protected $aclEntityService;
 
-    /**
-     * @param \Spryker\Service\AclEntity\AclEntityServiceInterface $aclEntityService
-     */
     public function __construct(AclEntityServiceInterface $aclEntityService)
     {
         $this->aclEntityService = $aclEntityService;
     }
 
-    /**
-     * @param \Spryker\Zed\DataImport\Business\Model\DataSet\DataSetInterface $dataSet
-     *
-     * @return void
-     */
     public function execute(DataSetInterface $dataSet): void
     {
         $dataEntity = $dataSet[AclEntitySegmentConnectorDataSetInterface::DATA_ENTITY];

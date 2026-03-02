@@ -63,9 +63,6 @@ class AclEntityDataImportConfig extends DataImportConfig
         return $this->buildImporterConfiguration($moduleDataImportDirectory . 'acl_entity_segment_connector.csv', static::IMPORT_TYPE_ACL_ENTITY_SEGMENT_CONNECTOR);
     }
 
-    /**
-     * @return string
-     */
     protected function getModuleRoot(): string
     {
         $moduleRoot = realpath(

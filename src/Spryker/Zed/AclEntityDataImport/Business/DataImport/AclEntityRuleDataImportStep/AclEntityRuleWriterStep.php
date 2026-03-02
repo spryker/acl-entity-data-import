@@ -14,11 +14,6 @@ use Spryker\Zed\DataImport\Business\Model\DataSet\DataSetInterface;
 
 class AclEntityRuleWriterStep implements DataImportStepInterface
 {
-    /**
-     * @param \Spryker\Zed\DataImport\Business\Model\DataSet\DataSetInterface $dataSet
-     *
-     * @return void
-     */
     public function execute(DataSetInterface $dataSet): void
     {
         $aclEntityRuleEntity = $this->createAclEntityRuleQuery()
@@ -31,9 +26,6 @@ class AclEntityRuleWriterStep implements DataImportStepInterface
         $aclEntityRuleEntity->save();
     }
 
-    /**
-     * @return \Orm\Zed\AclEntity\Persistence\SpyAclEntityRuleQuery
-     */
     protected function createAclEntityRuleQuery(): SpyAclEntityRuleQuery
     {
         return SpyAclEntityRuleQuery::create();

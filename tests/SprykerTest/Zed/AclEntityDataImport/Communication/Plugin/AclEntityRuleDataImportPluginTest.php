@@ -141,9 +141,6 @@ class AclEntityRuleDataImportPluginTest extends Unit
      */
     protected $tester;
 
-    /**
-     * @return void
-     */
     protected function setUp(): void
     {
         parent::setUp();
@@ -151,9 +148,6 @@ class AclEntityRuleDataImportPluginTest extends Unit
         $this->deleteAclRoles();
     }
 
-    /**
-     * @return void
-     */
     public function testImportImportsAclEntityRule(): void
     {
         // Arrange
@@ -219,9 +213,6 @@ class AclEntityRuleDataImportPluginTest extends Unit
         );
     }
 
-    /**
-     * @return void
-     */
     public function testImportImportsAclEntityRuleWithIncorrectRoleReference(): void
     {
         // Assert
@@ -243,9 +234,6 @@ class AclEntityRuleDataImportPluginTest extends Unit
         $dataImportPlugin->import($dataImporterConfigurationTransfer);
     }
 
-    /**
-     * @return void
-     */
     public function testImportImportsAclEntityRuleWithIncorrectSegmentReference(): void
     {
         // Assert
@@ -307,9 +295,6 @@ class AclEntityRuleDataImportPluginTest extends Unit
         ];
     }
 
-    /**
-     * @return void
-     */
     public function testGetImportTypeReturnsTypeOfImporter(): void
     {
         // Arrange
@@ -322,9 +307,6 @@ class AclEntityRuleDataImportPluginTest extends Unit
         $this->assertEquals(AclEntityDataImportConfig::IMPORT_TYPE_ACL_ENTITY_RULE, $importType);
     }
 
-    /**
-     * @return void
-     */
     protected function generateAclRoles(): void
     {
         $this->tester->haveRole(
@@ -359,9 +341,6 @@ class AclEntityRuleDataImportPluginTest extends Unit
         );
     }
 
-    /**
-     * @return void
-     */
     protected function deleteAclRoles(): void
     {
         $this->tester->deleteRoles(
@@ -377,9 +356,6 @@ class AclEntityRuleDataImportPluginTest extends Unit
         );
     }
 
-    /**
-     * @return void
-     */
     protected function _after(): void
     {
         parent::_after();
