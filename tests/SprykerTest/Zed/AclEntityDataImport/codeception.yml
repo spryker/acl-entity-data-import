@@ -21,6 +21,7 @@ suites:
                 - \SprykerTest\Zed\Acl\Helper\AclHelper
                 - \SprykerTest\Zed\AclEntity\Helper\AclEntityHelper
                 - \SprykerTest\Shared\Propel\Helper\ConnectionHelper
+                - \SprykerTest\Shared\Propel\Helper\TransactionHelper
                 - \SprykerTest\Shared\Testify\Helper\Environment
                 - \SprykerTest\Shared\Testify\Helper\LocatorHelper
                 - \SprykerTest\Shared\Testify\Helper\DataCleanupHelper
