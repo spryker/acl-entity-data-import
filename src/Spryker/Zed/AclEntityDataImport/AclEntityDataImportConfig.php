@@ -13,16 +13,22 @@ use Spryker\Zed\DataImport\DataImportConfig;
 class AclEntityDataImportConfig extends DataImportConfig
 {
     /**
+     * @api
+     *
      * @var string
      */
     public const IMPORT_TYPE_ACL_ENTITY_RULE = 'acl-entity-rule';
 
     /**
+     * @api
+     *
      * @var string
      */
     public const IMPORT_TYPE_ACL_ENTITY_SEGMENT = 'acl-entity-segment';
 
     /**
+     * @api
+     *
      * @var string
      */
     public const IMPORT_TYPE_ACL_ENTITY_SEGMENT_CONNECTOR = 'acl-entity-segment-connector';
